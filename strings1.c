@@ -1,15 +1,7 @@
 //my very first tutorial C program.
 /*
 *****
-cc main.c getline.c strindex.c
-compiles the three files, placing the resulting object code in files main.o , getline.o , and
-strindex.o , then loads them all into an executable file called a.out . If there is an error, say
-in main.c , the file can be recompiled by itself and the result loaded with the previous object
-files, with the command
-cc main.c getline.o strindex.o
-The cc command uses the `` .c '' versus `` .o ''
-naming convention to distinguish source files
-from object files.
+
 ****
 */
 
@@ -88,7 +80,8 @@ int main(){
 	int a=if_contains(k,spac);
 	print_tokens(k,spac);
 	printf("contians: %d",a);
-	get_span("01231414","123");
+	get_span("01231414","123");// outputs 0
+	get_span("1231414","123");// outputs 4
 	return 0;
 }
 
