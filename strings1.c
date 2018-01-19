@@ -95,16 +95,31 @@ int get_span(char* a,char* b){
 
 //initialise a string
 char* initialise_string(char* value)
-{
-	char *str=value;
+{	/*
+	char string[5];
+	string[0]='d';
+	string[1]='o';
+	string[2]='n';
+	string[3]='e';
+	string[4]=0; //needs explanation
 
-	/*other ways to initialise:
-	char string[]="my name";
-	const char* spac=" ";
+	char str[5]={'d','o','n','e','\0'};//another way to do it
 
-	char str[]="your name is something";
+	char string[5]="done"; // yet another way 
+	char string[]="done"; // yet yet another way 
+	char *string = "done"; //since arrays and pointers are (almost) the same thing in C. 
+
+	//yet another crazy way to do that
+	const char *string = (char*)malloc( 5 * (sizeof(char)));
+	*string = 'd';
+	*(string+1)='o';
+	*(string+2)='n';
+	*(string+3)='e';
+	*(string+4)='\0';
+
 	*/
-	
+	//for the sake of chosing the easiest way to initialize.
+	char *str=value;
 	return str;
 }
 	
