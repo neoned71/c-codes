@@ -21,6 +21,13 @@ void print_string(char* a){
 	printf(">>%s\n",a);
 }
 
+//user input
+char* user_input(){
+	char* s;
+	scanf("%s",s);
+	return s;
+}
+
 //sizes of the primitive types
 void print_sizes(){
 //int size_of_int=sizeof(int l); cant do this in c
