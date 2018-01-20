@@ -27,6 +27,35 @@ char* user_input(){
 	scanf("%s",s);
 	return s;
 }
+char* user_input_read(){
+	int MAX=100;
+	char s[MAX],temp[1];
+	int i;
+	for(i=0;i {
+		if(read(0,temp,1))
+		{
+			if(temp[0]=="\n" /* can check for any delimeter */)
+			{
+				break;
+			}
+			else
+			{
+				s[i]=temp[0];
+				i++;
+			}
+		}
+		else{
+			break;
+		}
+
+	}
+	
+		    
+
+	return s;
+
+}
+
 
 //sizes of the primitive types
 void print_sizes(){
