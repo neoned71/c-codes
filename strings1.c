@@ -31,7 +31,7 @@ char* user_input_read(){
 	int MAX=100;
 	char s[MAX],temp[1];
 	int i;
-	for(i=0;i {
+	for(i=0;i < MAX ;i++) {
 		if(read(0,temp,1))
 		{
 			if(temp[0]=="\n" /* can check for any delimeter */)
