@@ -7,7 +7,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<malloc.h>
-#include<limits.h>
+//#include<limits.h>
 
 //helping functions to be defined before calls in the main function( described after main()):
 char* initialise_string(char* d);
