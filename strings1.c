@@ -1,7 +1,6 @@
 //my very first tutorial C program.
 /*
 *****
-
 ****
 */
 
@@ -29,12 +28,13 @@ char* user_input(){
 }
 char* user_input_read(){
 	int MAX=100;
-	char s[MAX],temp[1];
+	char *s,temp[1];
+	s=(char*)malloc(MAX*sizeof(char));
 	int i;
 	for(i=0;i < MAX ;i++) {
 		if(read(0,temp,1))
 		{
-			if(temp[0]=="\n" /* can check for any delimeter */)
+			if(temp[0]=='\n' /* can check for any delimeter */)
 			{
 				break;
 			}
@@ -59,6 +59,7 @@ char* user_input_read(){
 
 //sizes of the primitive types
 void print_sizes(){
+//lets print sizes, as a bonus of this tutorial!
 //int size_of_int=sizeof(int l); cant do this in c
 	int size_of_char=sizeof(char);
 	int size_of_long=sizeof(long);
@@ -138,13 +139,10 @@ char* initialise_string(char* value)
 	string[2]='n';
 	string[3]='e';
 	string[4]=0; //needs explanation
-
 	char str[5]={'d','o','n','e','\0'};//another way to do it
-
 	char string[5]="done"; // yet another way 
 	char string[]="done"; // yet yet another way 
 	char *string = "done"; //since arrays and pointers are (almost) the same thing in C. 
-
 	//yet another crazy way to do that
 	const char *string = (char*)malloc( 5 * (sizeof(char)));
 	*string = 'd';
@@ -152,7 +150,6 @@ char* initialise_string(char* value)
 	*(string+2)='n';
 	*(string+3)='e';
 	*(string+4)='\0';
-
 	*/
 	//for the sake of chosing the easiest way to initialize.
 	char *str=value;
@@ -214,5 +211,3 @@ int length(char a[]){
 	//i+1 for the null character('\0') inclusion.
 	return i+1;
 }
-
-
